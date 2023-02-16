@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { AddToCartIcon, RemoveFromCartIcon } from "./Icons";
+import { Button } from "./ui/Button";
 
 import { useCart } from "../hooks/useCart";
 import { IProduct } from "../context/cart";
-import { Button } from "./ui/Button";
 
 interface ProductsProps {
   products: IProduct[];
@@ -17,7 +17,7 @@ export const Products: FC<ProductsProps> = ({ products }) => {
   };
 
   return (
-    <main className="products">
+    <main>
       <ul className="container grid grid-cols-3 gap-4">
         {products.map((product) => {
           const isProductInCart = checkProductInCart(product);

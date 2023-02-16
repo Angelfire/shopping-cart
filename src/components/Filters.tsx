@@ -1,7 +1,6 @@
 import { ChangeEvent, useId } from "react";
 
 import { useFilters } from "../hooks/useFilters";
-import { Slider } from "./ui/Slider";
 
 export function Filters() {
   const { filters, setFilters } = useFilters();
@@ -24,7 +23,7 @@ export function Filters() {
   };
 
   return (
-    <section className="filters">
+    <section>
       <div>
         <label htmlFor={minPriceFilterId}>Precio a partir de:</label>
         <input
